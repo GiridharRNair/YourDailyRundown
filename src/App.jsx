@@ -16,9 +16,10 @@ import { useState } from 'react';
 import axios from 'axios';
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
-import Typewriter from "typewriter-effect";
+import Typewriter from 'typewriter-effect';
 
 const API_URL = "https://giridharnair.pythonanywhere.com/"; 
+// const API_URL = 'http://127.0.0.1:8000'
 const categories = [
   { value: 'Business', label: 'Business' },
   { value: 'Entertainment', label: 'Entertainment' },
@@ -27,6 +28,8 @@ const categories = [
   { value: 'Science', label: 'Science' },
   { value: 'Sports', label: 'Sports' },
   { value: 'Technology', label: 'Technology' },
+  { value: 'World', label: 'World' },
+  { value: 'Politics', label: 'Politics' },
 ];
 
 
@@ -93,15 +96,12 @@ const App = () => {
           <Stack align={'center'}>
             <Heading fontSize={'3xl'} textAlign={'center'}>
             <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("Your Daily Rundown")
-                  .pauseFor(3000)
-                  .deleteAll()
-                  .typeString("Subscribe Now!")
-                  .start();
-                }}
-              />
+              options={{
+                strings: ['Your Daily Rundown', 'Subscribe Now!'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
             </Heading>
             <Text fontSize={'md'} color={'gray.600'} textAlign={'center'}>
               Stay informed with our newsletter! Get the latest news, curated and summarized to suit your preferences. Subscribe now!
