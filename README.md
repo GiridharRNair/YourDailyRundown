@@ -1,8 +1,5 @@
-# React + Vite
+# Your Daily Rundown - Newsletter Subscription Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a React application that provides a newsletter subscription form for "Your Daily Rundown." Users can subscribe to the newsletter by providing their first name, last name, email address, and selecting their preferred categories of news. The form allows users to receive curated and summarized news articles based on their preferences.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
