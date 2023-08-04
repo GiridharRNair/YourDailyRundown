@@ -18,8 +18,8 @@ import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import Typewriter from 'typewriter-effect';
 
-const API_URL = "https://giridharnair.pythonanywhere.com/"; 
-// const API_URL = 'http://127.0.0.1:8000'
+// const API_URL = "https://giridharnair.pythonanywhere.com/"; 
+const API_URL = 'http://127.0.0.1:5000'
 const categories = [
   { value: 'Business', label: 'Business' },
   { value: 'Entertainment', label: 'Entertainment' },
@@ -104,7 +104,7 @@ const App = () => {
             />
             </Heading>
             <Text fontSize={'md'} color={'gray.600'} textAlign={'center'}>
-              Stay informed with our newsletter! Get the latest news, curated and summarized to suit your preferences. Subscribe now!
+              Stay informed and subscribe to our newsletter for the latest news! Each day at 8am CST, we curate and summarize the most relevant updates tailored to your interests. Join now!
             </Text>
           </Stack>
           <Box
