@@ -18,7 +18,7 @@ import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import Typewriter from 'typewriter-effect';
 
-const API_URL = "https://giridharnair.pythonanywhere.com/"; 
+const API_URL = import.meta.env.VITE_FLASK_BACKEND; 
 // const API_URL = 'http://127.0.0.1:5000'
 const categories = [
   { value: 'Business', label: 'Business' },
@@ -172,7 +172,7 @@ const App = () => {
             </form>
           </Box>
           <Text fontSize={'xs'} color={'gray.600'} textAlign={'center'}>
-            If you don't see our email, check the spam folder. Update your preferences and name by re-registering for our newsletter; no duplicates will be recorded. To unsubscribe, click the link at the bottom of each email.
+          Some news information may be duplicated across categories. If you don't see our email, check the spam folder. Update your preferences and name by re-registering for our newsletter; no duplicates will be recorded. To unsubscribe, click the link at the bottom of each email.
           </Text>
       </Stack>
     </Flex>
