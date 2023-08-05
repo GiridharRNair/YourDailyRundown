@@ -2,6 +2,8 @@
 
 This repository contains the frontend code for the YourDailyRundown newsletter app. The app allows users to subscribe to a daily newsletter tailored to their interests. It was built using React and Chakra UI.
 
+[Backend Link](https://github.com/GiridharRNair/YourDailyRundownBackend)
+
 ## Features
 * User can enter their first name, last name, and email address to subscribe to the newsletter.
 * User can select one or more categories of interest from the provided options.
