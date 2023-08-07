@@ -19,7 +19,7 @@ import makeAnimated from "react-select/animated";
 import Typewriter from 'typewriter-effect';
 
 const API_URL = import.meta.env.VITE_FLASK_BACKEND; 
-// const API_URL = 'http://127.0.0.1:5000'
+// const API_URL = 'http://127.0.0.1:5000/'
 const categories = [
   { value: 'Business', label: 'Business' },
   { value: 'Entertainment', label: 'Entertainment' },
@@ -28,8 +28,6 @@ const categories = [
   { value: 'Science', label: 'Science' },
   { value: 'Sports', label: 'Sports' },
   { value: 'Technology', label: 'Technology' },
-  { value: 'World', label: 'World' },
-  { value: 'Politics', label: 'Politics' },
 ];
 
 
