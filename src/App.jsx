@@ -170,7 +170,7 @@ const App = () => {
             </form>
           </Box>
           <Text fontSize={'xs'} color={'gray.600'} textAlign={'center'}>
-          Some news information may be duplicated across categories. If you don't see our email, check the spam folder. Update your preferences and name by re-registering for our newsletter; no duplicates will be recorded. To unsubscribe, click the link at the bottom of each email.
+          Some news information may be incorrect or duplicated across categories. If you don't see our email, check the spam folder. Update your preferences and name by re-registering for our newsletter; no duplicates will be recorded. To unsubscribe, click the link at the bottom of each email.
           </Text>
       </Stack>
     </Flex>
