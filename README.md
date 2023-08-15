@@ -4,8 +4,9 @@ This repository contains the frontend code for the YourDailyRundown newsletter a
 
 [Backend Link](https://github.com/GiridharRNair/YourDailyRundownBackend)
 
-Example email of the science category:
-<img src='public/ScienceExample.png' />
+Example Email:
+<img src="public/ExampleEmail.gif" alt="Screenshot">
+
 
 ## Features
 * User can enter their first name, last name, and email address to subscribe to the newsletter.
