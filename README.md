@@ -4,8 +4,8 @@ This repository contains the frontend code for the YourDailyRundown newsletter a
 
 [Backend Link](https://github.com/GiridharRNair/YourDailyRundownBackend)
 
-Example Email:
-<img src="public/ExampleEmail.gif" alt="Screenshot">
+Example email of the automobile category:
+<img src="public/AutomobileCategoryExample.png" alt="Screenshot">
 
 
 ## Features
