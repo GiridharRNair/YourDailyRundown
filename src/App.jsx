@@ -21,14 +21,28 @@ import Typewriter from 'typewriter-effect';
 const API_URL = import.meta.env.VITE_FLASK_BACKEND; 
 // const API_URL = 'http://127.0.0.1:5000/'
 const categories = [
+  { value: 'Arts', label: 'Arts' },
+  { value: 'Automobiles', label: 'Automobiles' },
   { value: 'Business', label: 'Business' },
-  { value: 'Entertainment', label: 'Entertainment' },
-  { value: 'General', label: 'General' },
+  { value: 'Fashion', label: 'Fashion' },
+  { value: 'Food', label: 'Food' },
   { value: 'Health', label: 'Health' },
+  { value: 'Home', label: 'Home' },
+  { value: 'Insider', label: 'Insider' },
+  { value: 'Magazine', label: 'Magazine' },
+  { value: 'Movies', label: 'Movies' },
+  { value: 'Politics', label: 'Politics' },
+  { value: 'RealEstate', label: 'Real Estate' },
+  { value: 'nyregion', label: 'New York Region' },
   { value: 'Science', label: 'Science' },
   { value: 'Sports', label: 'Sports' },
   { value: 'Technology', label: 'Technology' },
+  { value: 'Theater', label: 'Theater' },
+  { value: 'Travel', label: 'Travel' },
+  { value: 'US', label: 'US' },
+  { value: 'World', label: 'World' },
 ];
+
 
 
 const App = () => {
