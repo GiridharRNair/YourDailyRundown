@@ -18,8 +18,8 @@ import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import Typewriter from 'typewriter-effect';
 
-const API_URL = import.meta.env.VITE_FLASK_BACKEND; 
-// const API_URL = 'http://127.0.0.1:5000/'
+// const API_URL = import.meta.env.VITE_FLASK_BACKEND; 
+const API_URL = 'http://127.0.0.1:5000'
 const categories = [
   { value: 'arts', label: 'Arts' },
   { value: 'automobiles', label: 'Automobiles' },
@@ -65,8 +65,8 @@ const App = () => {
         .then((response) => {
           console.log(response.data);
           toast({
-            title: 'Account created.',
-            description: "We've created your account for you.",
+            title: 'Success!',
+            description: response.data.message,
             status: 'success',
             duration: 9000,
             isClosable: true,
