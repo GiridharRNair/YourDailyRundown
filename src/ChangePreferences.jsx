@@ -3,11 +3,8 @@ import {
     Box,
     FormControl,
     FormLabel,
-    Input,
-    HStack,
     Stack,
     Button,
-    Heading,
     Text,
     useColorModeValue,
     useToast
@@ -19,7 +16,6 @@ import makeAnimated from "react-select/animated";
 import { useParams } from "react-router-dom";
 
 const API_URL = import.meta.env.VITE_FLASK_BACKEND; 
-// const API_URL = 'http://127.0.0.1:5000'
 const categories = [
     { value: 'arts', label: 'Arts' },
     { value: 'automobiles', label: 'Automobiles' },
@@ -45,7 +41,7 @@ const categories = [
 
 function ChangePreferences() {
     const toast = useToast()
-    const { email } = useParams()
+    const { uuid } = useParams()
     const [category, setCategory] = useState([categories[0]]);
 
     const handleCategoryChange = (selectedOptions) => {
@@ -54,36 +50,37 @@ function ChangePreferences() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const userData = {email, category}
+        const userData = {uuid, category}
+        console.log(userData)
         if (userData.category.length > 0) {
-            axios.post(`${API_URL}/register_user`, userData)
+            axios.post(`${API_URL}/update_user_preferences`, userData)
             .then((response) => {
                 console.log(response.data);
                 toast({
-                title: 'Success!',
-                description: response.data.message,
-                status: 'success',
-                duration: 9000,
-                isClosable: true,
+                    title: 'Success!',
+                    description: response.data.message,
+                    status: 'success',
+                    duration: 9000,
+                    isClosable: true,
                 })
             })
             .catch((error) => {
                 console.error("Error submitting data:", error);
                 toast({
-                title: 'Error creating account.',
-                description: "We've encountered an error, check back later.",
-                status: 'error',
-                duration: 9000,
-                isClosable: true,
+                    title: 'Error updating preferences.',
+                    description: JSON.stringify(error),
+                    status: 'error',
+                    duration: 9000,
+                    isClosable: true,
                 })
             });
         } else {
             toast({
-            title: 'Error creating account.',
-            description: "Please select at least one category.",
-            status: 'error',
-            duration: 9000,
-            isClosable: true,
+                title: 'Error creating account.',
+                description: "Please select at least one category.",
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
             })
         }
     };

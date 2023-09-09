@@ -18,8 +18,7 @@
     import makeAnimated from "react-select/animated";
     import Typewriter from 'typewriter-effect';
     
-    // const API_URL = import.meta.env.VITE_FLASK_BACKEND; 
-    const API_URL = 'http://127.0.0.1:5000'
+    const API_URL = import.meta.env.VITE_FLASK_BACKEND; 
     const categories = [
         { value: 'arts', label: 'Arts' },
         { value: 'automobiles', label: 'Automobiles' },
@@ -50,7 +49,7 @@ const HomePage = () => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
-    const [category, setCategory] = useState([categories[0]]);
+    const [category, setCatagories] = useState([categories[0]]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -94,7 +93,7 @@ const HomePage = () => {
     };
 
     const handleCategoryChange = (selectedOptions) => {
-        setCategory(selectedOptions);
+        setCatagories(selectedOptions);
     };
 
     return (

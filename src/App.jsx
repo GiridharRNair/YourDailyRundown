@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/YourDailyRundown" element={<HomePage/>} />
-          <Route path="/YourDailyRundown/:email" element={<ChangePreferences/>} />
+          <Route path="/YourDailyRundown/:uuid" element={<ChangePreferences/>} />
         </Routes>
       </Router>
     </>
