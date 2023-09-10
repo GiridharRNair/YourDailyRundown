@@ -3,8 +3,8 @@
 This repository contains the frontend code for the YourDailyRundown newsletter app. The app allows users to effortlessly subscribe, unsubscribe, and customize their preferences for a daily newsletter curated to match their interests. It is crafted with React and styled using Chakra UI.
 
 
-Backend Link: https://github.com/GiridharRNair/YourDailyRundownBackend <br/>
-Live Demo: https://giridharrnair.github.io/YourDailyRundown/
+Live Demo: https://your-daily-rundown.vercel.app/ <br/>
+Backend Link: https://github.com/GiridharRNair/YourDailyRundownBackend 
 
 Example email of the automobile category:
 <img src="public/AutomobileCategoryExample.png" alt="Screenshot">
@@ -21,7 +21,7 @@ Example email of the automobile category:
 1. Clone the repository to your local machine and change into the working directory using `cd YourDailyRundown`.
 2. Install the required dependencies using `npm install`.
 3. Start the development server with `npm run dev`.
-4. Access the app in your browser at `http://localhost:5173/YourDailyRundown/`.
+4. Access the app in your browser at `http://localhost:5173/`.
 
 ## License
 This project is licensed under the MIT License.

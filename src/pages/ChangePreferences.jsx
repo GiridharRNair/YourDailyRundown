@@ -77,7 +77,7 @@ function ChangePreferences() {
             duration: 9000,
             isClosable: true,
           });
-          navigate('/YourDailyRundown/');
+          navigate('/');
         }
       } catch (error) {
         toast({
@@ -87,7 +87,7 @@ function ChangePreferences() {
           duration: 9000,
           isClosable: true,
         });
-        navigate('/YourDailyRundown/');
+        navigate('/');
       }
     };
 

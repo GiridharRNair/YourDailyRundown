@@ -44,7 +44,7 @@ function Unsubscribe() {
           duration: 9000,
           isClosable: true,
         });
-        navigate('/YourDailyRundown/');
+        navigate('/');
       }
     };
 
@@ -67,17 +67,16 @@ function Unsubscribe() {
             duration: 9000,
             isClosable: true,
         });
-        navigate('/YourDailyRundown/');
+        navigate('/');
     } catch (error) {
-        console.error('Error updating preferences:', error);
+        console.error('Error unsubscribing:', error);
         toast({
-            title: 'Error Updating Preferences',
+            title: 'Error!',
             description: error.response.data.error,
             status: 'error',
             duration: 9000,
             isClosable: true,
         });
-        navigate('/YourDailyRundown/');
     }
   };
 

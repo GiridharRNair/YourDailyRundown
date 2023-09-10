@@ -9,9 +9,9 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/YourDailyRundown/" element={<HomePage />} />
-          <Route path="/YourDailyRundown/:uuid" element={<ChangePreferences />} />
-          <Route path="/YourDailyRundown/:uuid/unsubscribe" element={<Unsubscribe />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/:uuid" element={<ChangePreferences />} />
+          <Route path="/:uuid/unsubscribe" element={<Unsubscribe />} />
         </Routes>
       </Router>
     </>
