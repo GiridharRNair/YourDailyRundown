@@ -1,18 +1,14 @@
 # Your Daily Rundown Frontend
 
-This repository contains the frontend code for the YourDailyRundown newsletter app. The app allows users to subscribe to a daily newsletter tailored to their interests. It was built using React and Chakra UI.
+This repository contains the frontend code for the YourDailyRundown newsletter app. The app allows users to effortlessly subscribe, unsubscribe, and customize their preferences for a daily newsletter curated to match their interests. It is crafted with React and styled using Chakra UI.
 
-[Backend Link](https://github.com/GiridharRNair/YourDailyRundownBackend)
+
+Backend Link: https://github.com/GiridharRNair/YourDailyRundownBackend <br/>
+Live Demo: https://giridharrnair.github.io/YourDailyRundown/
 
 Example email of the automobile category:
 <img src="public/AutomobileCategoryExample.png" alt="Screenshot">
 
-
-## Features
-* User can enter their first name, last name, and email address to subscribe to the newsletter.
-* User can select one or more categories of interest from the provided options.
-* Newsletter preferences are submitted to the backend API for processing.
-* Success and error toasts are displayed to provide feedback on the registration process.
 
 ## Tech Stack
 * React: A JavaScript library for building user interfaces.
