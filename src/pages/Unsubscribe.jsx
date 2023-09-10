@@ -29,7 +29,7 @@ function Unsubscribe() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${API_URL}/${uuid}/get_user_categories`);
+        const response = await axios.get(`${API_URL}/${uuid}/get_user_info`);
         const { first_name, last_name } = response.data.user_info;
         setFormData((prevData) => ({
           ...prevData,
