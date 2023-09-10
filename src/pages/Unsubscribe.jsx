@@ -12,11 +12,9 @@ import {
   useToast,
 } from '@chakra-ui/react';
 import axios from 'axios';
-import sgMail from '@sendgrid/mail';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const API_URL = import.meta.env.VITE_FLASK_BACKEND;
-sgMail.setApiKey(import.meta.env.VITE_SENDGRID_API_KEY);
 
 function Unsubscribe() {
   const toast = useToast();
