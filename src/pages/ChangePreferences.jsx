@@ -98,8 +98,8 @@ function ChangePreferences() {
     e.preventDefault();
     const userData = {
       uuid: uuid,
-      firstName: formData.firstName,
-      lastName: formData.lastName,
+      firstName: toTitleCase(formData.firstName.trim()),
+      lastName: toTitleCase(formData.lastName.trim()),
       category: formData.category,
     };
     console.log(userData)
@@ -214,6 +214,12 @@ function ChangePreferences() {
         </Text>
       </Stack>
     </Flex>
+  );
+}
+
+function toTitleCase(text) {
+  return text.toLowerCase().replace(
+    /(?<![^\s\p{Pd}])[^\s\p{Pd}]/ug, match => match.toUpperCase()
   );
 }
 

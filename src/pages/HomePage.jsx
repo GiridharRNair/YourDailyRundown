@@ -54,10 +54,17 @@ const HomePage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (formData.category.length > 0) {
+  
+    const formattedUserData = {
+      firstName: toTitleCase(formData.firstName.trim()),
+      lastName: toTitleCase(formData.lastName.trim()),
+      email: formData.email.trim(),
+      category: formData.category,
+    };
+  
+    if (formattedUserData.category.length > 0) {
       try {
-        const response = await axios.post(`${API_URL}/register_user`, formData);
+        const response = await axios.post(`${API_URL}/register_user`, formattedUserData);
         toast({
           title: 'Success!',
           description: response.data.message,
@@ -85,6 +92,7 @@ const HomePage = () => {
       });
     }
   };
+  
 
   const handleCategoryChange = (selectedOptions) => {
     setFormData({ ...formData, category: selectedOptions });
@@ -186,5 +194,11 @@ const HomePage = () => {
     </Flex>
   );
 };
+
+function toTitleCase(text) {
+  return text.toLowerCase().replace(
+    /(?<![^\s\p{Pd}])[^\s\p{Pd}]/ug, match => match.toUpperCase()
+  );
+}
 
 export default HomePage;
