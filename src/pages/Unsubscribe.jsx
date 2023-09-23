@@ -54,28 +54,28 @@ function Unsubscribe() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const userData = {
-        uuid: uuid,
-        feedback: feedback,
+      uuid: uuid,
+      feedback: feedback,
     };
     try {
         const response = await axios.post(`${API_URL}/unsubscribe`, userData);
         console.log(response.data);
         toast({
-            title: 'Success!',
-            description: response.data.message,
-            status: 'success',
-            duration: 9000,
-            isClosable: true,
+          title: 'Success!',
+          description: response.data.message,
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
         });
         navigate('/');
     } catch (error) {
         console.error('Error unsubscribing:', error);
         toast({
-            title: 'Error!',
-            description: error.response.data.error,
-            status: 'error',
-            duration: 9000,
-            isClosable: true,
+          title: 'Error!',
+          description: error.response.data.error,
+          status: 'error',
+          duration: 9000,
+          isClosable: true,
         });
     }
   };

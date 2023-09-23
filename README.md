@@ -1,21 +1,29 @@
 # Your Daily Rundown Frontend
 
-This repository contains the frontend code for the YourDailyRundown newsletter app. The app allows users to effortlessly subscribe, unsubscribe, and customize their preferences for a daily newsletter curated to match their interests. It is crafted with React and styled using Chakra UI.
+Welcome to the frontend repository for YourDailyRundown! This repository contains the source code for the frontend of YourDailyRundown, an email service designed to summarize news articles and deliver them to users. The frontend is built using React and Chakra UI.
 
 
 Live Demo: https://your-daily-rundown.vercel.app/ <br/>
 Backend Link: https://github.com/GiridharRNair/YourDailyRundownBackend 
 
-Example email of the automobile category:
-<img src="public/AutomobileCategoryExample.png" alt="Screenshot">
+Example email sent by the backend:
+<img src="public/DemoGif.gif" alt="Screenshot">
 
+## Components
 
-## Tech Stack
-* React: A JavaScript library for building user interfaces.
-* Chakra UI: A simple, modular, and accessible component library for React.
-* Axios: A promise-based HTTP client for making API requests.
-* react-select: A flexible and customizable select input component for React.
-* Typewriter: A library for creating typewriter-like animations.
+### HomePage (pages/HomePage.jsx)
+The HomePage component is responsible for user registration. Users can provide their first name, last name, email address, and select their preferences from a list of categories. When submitted, this data is sent to the backend for registration.
+
+### Unsubscribe (pages/Unsubscribe.jsx)
+The Unsubscribe component allows users to unsubscribe from YourDailyRundown. Users provide feedback (optional) and confirm their unsubscribe action. The component fetches user information from the backend using a UUID parameter.
+
+### ChangePreferences (pages/ChangePreferences.jsx)
+The ChangePreferences component allows users to update their preferences, including their first name, last name, and category selections. Users can modify their preferences after initial registration. The component fetches user information from the backend using a UUID parameter.
+
+### Environment Variables
+To run the YourDailyRundown Frontend, you'll need to set the following environment variables:
+
+`VITE_FLASK_BACKEND`=Backend URL <br/>
 
 ## Installation and Setup
 1. Clone the repository to your local machine and change into the working directory using `cd YourDailyRundown`.

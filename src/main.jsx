@@ -4,6 +4,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 import * as ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './styles/index.css'
+import { Analytics } from '@vercel/analytics/react';
+
 
 const colors = {
   brand: {
@@ -18,5 +20,6 @@ const theme = extendTheme({ colors })
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ChakraProvider theme={theme}>
     <App />
+    <Analytics />
   </ChakraProvider>
 )

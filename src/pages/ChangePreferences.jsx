@@ -19,26 +19,26 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const API_URL = import.meta.env.VITE_FLASK_BACKEND;
 const categories = [
-    { value: 'arts', label: 'Arts' },
-    { value: 'automobiles', label: 'Automobiles' },
-    { value: 'business', label: 'Business' },
-    { value: 'fashion', label: 'Fashion' },
-    { value: 'food', label: 'Food' },
-    { value: 'health', label: 'Health' },
-    { value: 'home', label: 'Home' },
-    { value: 'insider', label: 'Insider' },
-    { value: 'magazine', label: 'Magazine' },
-    { value: 'movies', label: 'Movies' },
-    { value: 'politics', label: 'Politics' },
-    { value: 'realestate', label: 'Real Estate' },
-    { value: 'nyregion', label: 'New York Region' },
-    { value: 'science', label: 'Science' },
-    { value: 'sports', label: 'Sports' },
-    { value: 'technology', label: 'Technology' },
-    { value: 'theater', label: 'Theater' },
-    { value: 'travel', label: 'Travel' },
-    { value: 'us', label: 'US' },
-    { value: 'world', label: 'World' },
+  { value: 'arts', label: 'Arts' },
+  { value: 'automobiles', label: 'Automobiles' },
+  { value: 'business', label: 'Business' },
+  { value: 'fashion', label: 'Fashion' },
+  { value: 'food', label: 'Food' },
+  { value: 'health', label: 'Health' },
+  { value: 'home', label: 'Home' },
+  { value: 'insider', label: 'Insider' },
+  { value: 'magazine', label: 'Magazine' },
+  { value: 'movies', label: 'Movies' },
+  { value: 'politics', label: 'Politics' },
+  { value: 'realestate', label: 'Real Estate' },
+  { value: 'nyregion', label: 'New York Region' },
+  { value: 'science', label: 'Science' },
+  { value: 'sports', label: 'Sports' },
+  { value: 'technology', label: 'Technology' },
+  { value: 'theater', label: 'Theater' },
+  { value: 'travel', label: 'Travel' },
+  { value: 'us', label: 'US' },
+  { value: 'world', label: 'World' },
 ];
 
 function ChangePreferences() {
@@ -102,7 +102,6 @@ function ChangePreferences() {
       lastName: toTitleCase(formData.lastName.trim()),
       category: formData.category,
     };
-    console.log(userData)
     if (userData.category.length > 0) {
       try {
         const response = await axios.post(`${API_URL}/update_user_preferences`, userData);
