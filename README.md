@@ -20,10 +20,14 @@ The Unsubscribe component allows users to unsubscribe from YourDailyRundown. Use
 ### ChangePreferences (pages/ChangePreferences.jsx)
 The ChangePreferences component allows users to update their preferences, including their first name, last name, and category selections. Users can modify their preferences after initial registration. The component fetches user information from the backend using a UUID parameter.
 
-### Environment Variables
+### PageNotFound (pages/PageNotFound.jsx)
+This module handles 404 errors by redirecting users to the home page and displaying an error message. It uses React Router and Chakra UI for navigation and toast notifications.
+
+
+## Environment Variables
 To run the YourDailyRundown Frontend, you'll need to set the following environment variables:
 
-`VITE_FLASK_BACKEND`=Backend URL <br/>
+`VITE_FLASK_BACKEND`=Backend Endpoint <br/>
 
 ## Installation and Setup
 1. Clone the repository to your local machine and change into the working directory using `cd YourDailyRundown`.
